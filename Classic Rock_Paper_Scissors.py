@@ -1,8 +1,8 @@
 '''
 The Rules of the rock-paper-scissors are:
 Rock > Scissors , Paper > Rock , Scissors >Paper
+If both choice the same (Rock=Rock,Paper=Paper  Scissors=Scissors) the result is a tie . 
 '''
-
 #using if/elif statements
 import random
 
