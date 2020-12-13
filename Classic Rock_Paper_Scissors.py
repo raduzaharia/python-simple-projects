@@ -6,8 +6,12 @@ If both choice the same (Rock=Rock,Paper=Paper  Scissors=Scissors) the result is
 #using if/elif statements
 import random
 
-user=input("What's your choice ? 'r'for rock,'p'for papper and 's' for scissors: ")
+user=input("What's your choice ? 'r' for rock,'p' for papper and 's' for scissors: ")
 user=user.lower()
+
+if user not in ('r','p','s'):
+    print("Wrong choice, type a following letter 'r','p' or 's'")
+    
 computer = random.choice(['r','p','s'])
 
 
@@ -24,7 +28,7 @@ elif user=="p" and computer =="r":
                 print("You won")
 elif user=="p" and computer=="s":
                 print("You lost")
-		
+        
 if user =="s" and computer =="s":
                 print("It's a tie")
 elif user=="s" and computer =="p":
@@ -38,17 +42,20 @@ elif user=="s" and computer=="r":
 import random
 
 def rps():
-	user=input("What's your choice ? 'r'for rock,'p'for papper and 's' for scissors: ")
-	user=user.lower()
-	computer = random.choice(['r','p','s'])
+    user=input("What's your choice ? 'r'for rock,'p'for papper and 's' for scissors: ")
+    user=user.lower()
+    
+    if user not in ('r','p','s'):
+        print("Wrong choice, type a following letter 'r','p' or 's'")
+    computer = random.choice(['r','p','s'])
 
-	if user ==computer:
-		return("It's a tie")
+    if user ==computer:
+        return("It's a tie")
 
-	if win(user,computer):
-		return('You won')
+    if win(user,computer):
+        return('You won')
 
-	return ("You lost")
+    return ("You lost")
 
 
 def win(user,computer):
